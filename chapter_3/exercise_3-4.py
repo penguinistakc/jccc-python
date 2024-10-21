@@ -5,7 +5,7 @@ Ask the user to input three numbers representing a lower
 limit, a higher limit, and a step value.
 The program should loop through and print the numbers from
 low to high, taking into consideration the step.
-• A for loop and range function should be used for this
+A for loop and range function should be used for this
 exercise.
 """
 
