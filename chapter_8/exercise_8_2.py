@@ -1,5 +1,15 @@
 import sys
 
+"""Rewrite Exercise 1 but this time get the file names from
+the command line.
+The interface would look as shown below.
+• Make sure the correct number of command line arguments is
+provided.
+• Otherwise, print an error message and terminate the
+program.
+python3 program_name inputfile outputfile
+"""
+
 
 def main(input_filename, output_filename):
     # Open the input file for reading and the output file for writing

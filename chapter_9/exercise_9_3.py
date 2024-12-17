@@ -1,85 +1,13 @@
-class FamilyError(Exception):
-    """
-    Custom exception for Family class errors.
-    """
+from family_ex_9_2 import Family
+from family_error import FamilyError
+from person import Person
 
-    def __init__(self, message):
-        super().__init__(message)
-
-
-class Person:
-    def __init__(self, name, age, gender):
-        """
-        Initialize a Person object with name, age, and gender.
-        """
-        self._name = name
-        self._age = age
-        self._gender = gender
-
-    # Getters and Setters
-    def get_name(self):
-        return self._name
-
-    def set_name(self, name):
-        self._name = name
-
-    def get_age(self):
-        return self._age
-
-    def set_age(self, age):
-        self._age = age
-
-    def get_gender(self):
-        return self._gender
-
-    def set_gender(self, gender):
-        self._gender = gender
-
-    # String Representation
-    def __str__(self):
-        return f"{self._name}, Age: {self._age}, Gender: {self._gender}"
-
-
-class Family:
-    def __init__(self, parent1, parent2, *children):
-        """
-        Initialize a Family object with two parents and optional children.
-        """
-        if not isinstance(parent1, Person) or not isinstance(parent2, Person):
-            raise FamilyError(
-                "The first two arguments must be Person objects (parents)."
-            )
-
-        self.parent1 = parent1
-        self.parent2 = parent2
-        self.children = []
-
-        # Validate and add children
-        for child in children:
-            if not isinstance(child, Person):
-                raise FamilyError("All children must be Person objects.")
-            self.children.append(child)
-
-    def add(self, child):
-        """
-        Add a child to the family.
-        """
-        if not isinstance(child, Person):
-            raise FamilyError("The child must be a Person object.")
-        self.children.append(child)
-
-    def __str__(self):
-        """
-        String representation of the Family object.
-        """
-        family_str = f"Parents:\n  {self.parent1}\n  {self.parent2}\n"
-        if self.children:
-            family_str += "Children:\n"
-            for child in self.children:
-                family_str += f"  {child}\n"
-        else:
-            family_str += "No children in this family.\n"
-        return family_str.strip()
+"""Create an exception class named FamilyError.
+This exception should get raised when there is an attempt to
+add a non-Person object to a Family object.
+• Remember that Person objects can be added in both the
+__init__ method and the add method.
+"""
 
 
 # Test the classes

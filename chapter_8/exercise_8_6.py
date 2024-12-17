@@ -1,6 +1,12 @@
 import sys
 from collections import defaultdict
 
+"""Now, create a few more files file with one name per line.
+The program in this exercise should read all these files and
+print the number of times each line occurs over all of the files.
+The file names should be supplied on the command line.
+"""
+
 
 def main():
     # Check if at least one file is supplied

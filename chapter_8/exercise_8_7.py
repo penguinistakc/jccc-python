@@ -1,5 +1,9 @@
 import sys
 
+"""Write a program that counts the number of lines, words,
+and characters in each file named on the command line.
+"""
+
 
 def count_file_statistics(file_name):
     """

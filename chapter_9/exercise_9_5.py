@@ -1,49 +1,19 @@
-class Worker:
-    def __init__(self, name, salary, years_worked):
-        """
-        Initialize a Worker object with name, salary, and years worked.
-        """
-        self._name = name
-        self._salary = salary
-        self._years_worked = years_worked
+from employee import Worker, Manager, Executive
 
-    def pension(self):
-        """
-        Calculate pension for a Worker: years worked * 10% of salary.
-        """
-        return self._years_worked * (0.10 * self._salary)
-
-    def getname(self):
-        """
-        Return the name of the Worker.
-        """
-        return self._name
-
-    def __str__(self):
-        return f"Worker(Name: {self._name}, Salary: {self._salary}, Years Worked: {self._years_worked}, Pension: {self.pension():.2f})"
-
-
-class Manager(Worker):
-    def pension(self):
-        """
-        Calculate pension for a Manager: years worked * 20% of salary.
-        """
-        return self._years_worked * (0.20 * self._salary)
-
-    def __str__(self):
-        return f"Manager(Name: {self._name}, Salary: {self._salary}, Years Worked: {self._years_worked}, Pension: {self.pension():.2f})"
-
-
-class Executive(Manager):
-    def pension(self):
-        """
-        Calculate pension for an Executive: years worked * 30% of salary.
-        """
-        return self._years_worked * (0.30 * self._salary)
-
-    def __str__(self):
-        return f"Executive(Name: {self._name}, Salary: {self._salary}, Years Worked: {self._years_worked}, Pension: {self.pension():.2f})"
-
+"""Implement the following class hierarchy.
+Define a Worker class with a name, a salary, and number of
+years worked.
+• Provide a method named pension that returns an amount
+equal to the years worked times 10% of the salary.
+Derive Manager from Worker.
+• A manager's pension is defined by the number of years
+worked times 20% of the salary.
+Derive Executive from Manager.
+• An executive's pension is defined by the number of years
+worked times 30% of the salary.
+Implement a getname() method in the Worker class and have
+this be a default method for all derived classes.
+"""
 
 # Testing the classes
 if __name__ == "__main__":

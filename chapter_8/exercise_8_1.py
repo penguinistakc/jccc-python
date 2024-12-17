@@ -1,3 +1,15 @@
+"""Write a program that asks the user for the names of an
+input and an output file.
+Open both of these files and then have the program read from
+the input file (use readline) and write to the output file (use
+write).
+• In effect, this is a copy program.
+• The interface to the program might look like:
+Enter the name of the input file: myinput
+Enter the name of the output file: myoutput
+"""
+
+
 def main(input_filename, output_filename):
     # Open the input file for reading and the output file for writing
     infile = open(input_filename, "r")

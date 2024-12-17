@@ -1,5 +1,11 @@
 import sys
 
+"""Revise your solution to the previous exercise so that if
+you specify the "-t" option on the command line (before
+the list of files), your program also prints total number of
+lines, words, and characters in all the files.
+"""
+
 
 def count_file_statistics(file_name):
     """

@@ -1,5 +1,8 @@
 import sys
 
+"""Add exception handling to Exercise 2 so that if a file open
+fails, an OSError is handled and the program is halted."""
+
 
 def main(input_filename, output_filename):
     try:

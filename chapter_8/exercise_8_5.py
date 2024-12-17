@@ -1,5 +1,12 @@
 import sys
 
+"""Create two data files, each with a set of names, one per
+line.
+Now, write a program that reads both files and lists only those
+names that are in both files.
+The two file names should be supplied on the command line.
+"""
+
 
 def main():
     # Check if the correct number of command-line arguments are passed
