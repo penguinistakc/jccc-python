@@ -3,14 +3,14 @@
 import sys
 
 ct = lines = 0
-file = open(sys.argv[1], "r")
+with open(sys.argv[1], "r") as file:
 
-while True:
-    line = file.readline()
-    if not line:
-        break
-    ct += len(line)
-    lines += 1
+    while True:
+        line = file.readline()
+        if not line:
+            break
+        ct += len(line)
+        lines += 1
 
-file.close()
+# file.close()
 print("Characters: ", ct, " Lines: ", lines)

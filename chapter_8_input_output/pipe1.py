@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
-import platform
+import subprocess
 
-p = platform.popen("dir", "r")
-data = p.readlines()
-p.close()
-for i in data:
-    print(i, end="")
+
+def list_files_in_dir(directory):
+    p = subprocess.run(["ls", directory], capture_output=True, text=True)
+    return p.stdout.splitlines()
+
+
+if __name__ == "__main__":
+    for i in list_files_in_dir("."):
+        print(i)
