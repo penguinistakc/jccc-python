@@ -37,6 +37,8 @@ def main():
                 )
         except ValueError:
             print("Error: Invalid input. Please enter a valid number or 'end'.")
+        except IndexError:
+            print("Error: Index out of range. Please enter a number between 0 and 9.")
 
 
 if __name__ == "__main__":

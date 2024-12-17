@@ -42,6 +42,8 @@ def main():
                 )
         except ValueError:
             print("Error: Invalid input. Please enter a valid number or 'end'.")
+        except IndexError as ie:
+            print(ie)
 
 
 if __name__ == "__main__":

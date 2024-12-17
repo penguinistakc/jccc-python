@@ -12,11 +12,11 @@ while True:
         print("Name is: " + names[value])
         name = input("Enter a name: ")
         print(name, " => ", themap[name])
-    except ValueError:
+    except ValueError as ve:
         print("Value Error: non numeric data")
     except IndexError as ie:
         print("Illegal subscript:", ie)
     except KeyError as ke:
         print("Illegal key")
-    except:
+    except Exception:
         print("Unknown Error: ")
