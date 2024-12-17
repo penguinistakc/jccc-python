@@ -3,7 +3,7 @@
 import os
 
 # Reading from file in binary mode
-file = open("seekdata.txt", "rb")
+file = open("datafile.csv", "rb")
 print(file.read())
 
 file.seek(3, os.SEEK_SET)
@@ -21,7 +21,7 @@ file.close()
 print("#" * 30)
 
 # Reading from file in text mode
-file = open("seekdata.txt", "r")
+file = open("datafile.csv", "r")
 print(file.read())
 
 file.seek(12, os.SEEK_SET)

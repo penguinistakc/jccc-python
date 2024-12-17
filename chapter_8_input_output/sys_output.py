@@ -3,4 +3,4 @@
 import sys
 
 sys.stdout.write("Standard Output\n")
-sys.stederr.write("Error Output\n")
+sys.stderr.write("Error Output\n")

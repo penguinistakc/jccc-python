@@ -1,7 +1,8 @@
 #!/usr/in/env python3
 
-f = open("test.txt", "a")
-f.write("Appended to the bottom")
-f.write(" of the file\n")
-f.write("More at the bottom\n")
+f = open("numeric", "w")
+x = 58
+print(type(x))
+f.write(str(x) + "\n")
+f.write(str(43.5))
 f.close()
